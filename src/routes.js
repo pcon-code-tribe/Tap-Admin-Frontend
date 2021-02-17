@@ -9,6 +9,8 @@ import notifications from './views/notifications';
 import profile from './views/profile';
 import settings from './views/settings';
 
+
+//different routes
 const dashboardRoutes = [
   {
     path: "/dashboard",

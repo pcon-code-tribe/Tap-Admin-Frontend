@@ -1,25 +1,20 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 
-import Footer from "./components/Footer";
-import Sidebar from "./components/Sidebar";
+import Footer from "../components/Footer";
+import Sidebar from "../components/Sidebar";
 
-import routes from "./routes.js";
+import routes from "../routes.js";
 
-import sidebarImage from "./assets/img/sidebar-3.jpg";
+import image from "../assets/img/logoNITJSR.png";
 
 function Admin() {
-  const [image, setImage] = React.useState(sidebarImage);
   const mainPanel = React.useRef(null);
   const getRoutes = (routes) => {
     return routes.map((prop, key) => {
       if (prop.layout === "/admin") {
         return (
-          <Route
-            path={prop.layout + prop.path}
-            render={(props) => <prop.component {...props} />}
-            key={key}
-          />
+          <Route path={prop.layout + prop.path} render={(props) => <prop.component {...props} />} key={key} />
         );
       } else {
         return null;

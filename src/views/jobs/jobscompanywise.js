@@ -1,10 +1,11 @@
 import React from 'react'
 import {Card, Container, Table} from 'react-bootstrap'
 
+//job details according to companywise
 function jobscompanywise() {
     return (
         <>
-        <Container fluid>
+        <Container>
               <Card className="strpied-tabled-with-hover">
                 <Card.Header>
                   <Card.Title as="h4">Jobs/Internships Details</Card.Title>

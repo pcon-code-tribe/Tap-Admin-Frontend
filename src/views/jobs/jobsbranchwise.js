@@ -1,10 +1,11 @@
 import React from 'react'
 import {Container, Card, Table} from 'react-bootstrap'
 
+// job details according to branchwise 
 function jobsbranchwise() {
     return (
         <>
-        <Container fluid>
+        <Container>
               <Card className="strpied-tabled-with-hover m-2">
                 <Card.Header>
                   <Card.Title as="h4">CSE</Card.Title>
