@@ -24,7 +24,6 @@ function Admin() {
   return (
     <>
       <div className="wrapper">
-      <h1>Trial...</h1>
         <Sidebar image={image} routes={routes} />
         <div className="main-panel" ref={mainPanel}>
           <div className="content">
