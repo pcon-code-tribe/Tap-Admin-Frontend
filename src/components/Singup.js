@@ -52,7 +52,7 @@ function Singup() {
                 To keep connected with us please login with your personal info
               </p>
               <button className="SignUp_button SignUp_ghost" id="signUp">
-                <Link to="/">Sing In</Link>
+                <Link to="/">Sign In</Link>
               </button>
             </div>
           </div>
