@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
+
+* {
+  box-sizing: border-box;
+}
+
+.SignUp_App {
+  background-image: url("../assets/img/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+}
+
+.SignUp_h1 {
+  font-weight: bold;
+  margin: 0;
+}
+
+.SignUp_h2 {
+  text-align: center;
+}
+
+.SignUp_p {
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  margin: 20px 0 30px;
+}
+
+.SignUp_span {
+  font-size: 12px;
+}
+
+a {
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+  outline: none;
+}
+
+.SignUp_button {
+  border-radius: 20px;
+  border: 1px solid rgb(226, 126, 173);
+  background-color: rgb(247, 3, 117);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  cursor: pointer;
+  outline: none;
+}
+
+.SignUp_button.SignUp_sign {
+  margin-top: 20px;
+}
+
+.SignUp_button a {
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+}
+
+.SignUp_button:active {
+  transform: scale(0.95);
+}
+
+.SignUp_button:focus {
+  outline: none;
+}
+
+.SignUp_button.SignUp_ghost {
+  background-color: transparent;
+  border-color: #ffffff;
+}
+
+/* #### FORM CONTAINER #### */
+.SignUp_container {
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 800px;
+  border-radius: 20px;
+}
+
+.SignUp_overlay-container {
+  background: linear-gradient(to right, rgb(250, 59, 148), #f3102e);
+  color: #ffffff;
+  transition: transform 0.6s ease-in-out;
+  padding: 30px;
+  padding-top: 20%;
+  text-align: center;
+  height: 500px;
+  min-width: 50%;
+  flex: 2;
+}
+
+.SignUp_form-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 50px;
+  flex: 2;
+  color: white;
+  text-align: center;
+  height: 500px;
+}
+
+.SignUp_sign-in-container,
+.SignUp_sign-up-overlay {
+  border-radius: 0 20px 20px 0;
+}
+.SignUp_sign-in-overlay,
+.SignUp_sign-up-container {
+  border-radius: 20px 0 0 20px;
+}
+
+/* #### FORM #### */
+
+.SignUp_form_control {
+  position: relative;
+  margin-top: 10px;
+  width: 90%;
+}
+
+.SignUp_form_control input {
+  border: none;
+  border-bottom: 2px solid white;
+  display: block;
+  height: 40px;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.SignUp_form_control label {
+  position: absolute;
+  top: 20px;
+  left: 10%;
+  font-size: 16px;
+}
+
+.SignUp_form_control input:focus,
+.SignUp_form_control input:valid {
+  border-bottom: 3px solid rgb(247, 3, 117);
+  outline: none;
+}
+
+.SignUp_form_control label span {
+  display: inline-block;
+  font-size: 16px;
+  min-width: 5px;
+  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.SignUp_form_control input:focus + label span,
+.SignUp_form_control input:valid + label span {
+  transform: translateY(-25px);
+  color: rgb(255, 50, 146);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* #### SOCIAL #### */
+.SignUp_social-container {
+  margin: 20px 0;
+}
+
+.SignUp_social-container a {
+  border: 1px solid #dddddd;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  height: 40px;
+  width: 40px;
+}
+
+@media only screen and (max-width: 760px) {
+  .SignUp_container {
+    display: block;
+    max-width: 450px;
+  }
+  .SignUp_overlay-container {
+    height: 400px;
+  }
+  .SignUp_App {
+    height: 100%;
+    margin-top: 80px;
+    margin-bottom: 60px;
+  }
+  .SignUp_sign-in-container,
+  .SignUp_sign-up-overlay {
+    border-radius: 0 0 20px 20px;
+  }
+  .SignUp_sign-in-overlay,
+  .SignUp_sign-up-container {
+    border-radius: 20px 20px 0 0;
+  }
+}
