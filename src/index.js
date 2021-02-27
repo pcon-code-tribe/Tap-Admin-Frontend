@@ -15,9 +15,7 @@ ReactDOM.render(
     <Switch>
       <Route exact path="/" component={Singin} />
       <Route exact path="/signup" component={Singup} />
-      {/* <Route path="/admin/dashboard" component={App} /> */}
       <Route path="/admin" render={(props) => <App {...props} />} />
-      {/* <Redirect from="/" to="/admin/dashboard" /> */}
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")

@@ -1,0 +1,223 @@
+*{
+    box-sizing: border-box;
+}
+
+.Applied-student .header{
+    max-width: 100%;
+    height: 450px;
+    /* background: rgb(0, 0, 0) no-repeat 0 80%; */
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("./img/dashboard-bg.jpg") ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-bottom: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.Applied-student .header .searchbar{
+    background-color:rgba(255,255,255,0.5);
+    padding-top: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 18px;
+    text-align: center;
+} 
+
+.Applied-student .header input{
+    width: 310px;
+    height: 50px;
+    background-color: white;
+    color: black;
+    outline: none;
+    border: none;
+    padding-left: 20px;
+    border-left: 2px solid rgb(66, 66, 66);
+}
+
+.Applied-student .header button{
+    margin: auto;
+    margin-top: 20px;
+    height: 50px;
+    width: 200px;
+    background-color: rgb(230, 15, 140);
+    color: white;
+    border: none;
+}
+
+.Applied-student .title{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Applied-student .title span{
+    color: rgb(230, 15, 140);
+}
+
+.Applied-student .title p{
+    font-weight: normal;
+    color: grey;
+    margin-bottom: 0;
+}
+
+.Applied-student .card-container{
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    flex-direction: row;
+    padding-bottom: 50px;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.Applied-student .card{
+    text-align: center;
+    max-width: 480px;
+    background-color: white;
+    margin: 40px;
+    padding: 30px 50px 70px 50px;
+    border-radius: 10px;
+    position: relative;
+    min-height: 300px;
+    box-shadow: 2px 5px 16px 0 grey;
+    transition: all 0.5s ease;
+}
+
+.Applied-student .card:hover{
+    transform: scale(1.050);
+}
+
+.Applied-student .card h2 img{
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+    position: absolute;
+    top: -30px;
+    left: 40%;
+    border-radius: 50%;
+}
+
+.Applied-student .card small{
+    margin-top: -12px;
+}
+
+
+.Applied-student .card .Cv{
+    border: 2px solid white;
+    border-radius: 0 0 10px 10px;
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.5s ease;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.Applied-student .card .Cv:hover{
+    background-color: rgb(230, 15, 140);
+    color:white;
+}
+
+.Applied-student .card p{
+    color: grey;
+}
+
+.Applied-student .footer{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(0, 0, 78);
+    color: white;
+}
+
+.Applied-student .details{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-top: 15px;
+}
+
+.Applied-student .details .desc{
+    
+    background-color: rgb(230, 15, 140);
+    position: absolute;
+    width: 120px;
+    height: 35px;
+    color: white;
+    padding-top: 5px;
+}
+
+.Applied-student .details .branch{
+    border-radius: 0 5px 5px 0;
+    left: -50px;
+}
+
+.Applied-student .details .cgpa{
+    border-radius: 5px 0 0 5px;
+    right: -50px;
+}
+
+.Applied-student .card .tags{
+    width: 100%;
+    text-align: center;
+    margin-top: 20%;
+}
+
+.Applied-student .card .tags button{
+    margin-left: 10px;
+    border: 1px solid grey;
+    background-color: transparent;
+    border-radius: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: rgb(153, 153, 153);
+    padding: 5px 15px 5px 15px;
+    /* display: block; */
+   
+}
+
+@media only screen and (max-width:550px){
+    .Applied-student .card{
+        min-width: 300px;
+        min-height: 400px;
+    }
+    .Applied-student .card .tags button{
+        margin-top: 20px;
+    }
+
+}
+
+@media only screen and (max-width:1200px){
+    .Applied-student .header .searchbar{
+         padding: 15px; 
+    }
+}
+
+@media only screen and (max-width:790px){
+    .Applied-student .header input{
+        width: 98%;
+        margin-top: 10px;
+    }
+
+    .Applied-student .header button{
+        width: 98%;
+    }
+}

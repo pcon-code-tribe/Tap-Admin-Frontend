@@ -15,7 +15,7 @@ function Singin() {
                 Enter your personal details and start journey with us
               </p>
               <button className="SignIn_button SignIn_ghost " id="signUp">
-                <Link to="/signup">Sing Up</Link>
+                <Link to="/signup">Sign Up</Link>
               </button>
             </div>
           </div>
@@ -50,7 +50,7 @@ function Singin() {
 
             <Link to="/"> Forget your Password </Link>
             <button className="SignIn_button SignIn_sign">
-              <Link to="/admin">Sign In</Link>
+              <Link to="/admin/dashboard">Sign In</Link>
             </button>
           </form>
         </section>
