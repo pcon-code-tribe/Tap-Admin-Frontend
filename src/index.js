@@ -7,8 +7,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import App from "./App";
-import Signin from "./components/Singin";
-import Signup from "./components/Singup";
+import Signin from "./components/Signin";
+import Signup from "./components/Signup";
 
 ReactDOM.render(
   <BrowserRouter>

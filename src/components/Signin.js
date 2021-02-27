@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 // import Icon from '@material-ui/core/Icon';
 import "./signin.css";
 
-function Singin() {
+function Signin() {
   return (
     <div className="SignIn_App">
       <section className="SignIn_container" id="container">
@@ -59,4 +59,4 @@ function Singin() {
   );
 }
 
-export default Singin;
+export default Signin;

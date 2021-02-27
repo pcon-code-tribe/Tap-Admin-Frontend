@@ -8,7 +8,7 @@ import Jobsbranchwise from './views/jobs/jobsbranchwise';
 import Jobscompanywise from './views/jobs/jobscompanywise';
 import Notifications from './views/notifications';
 import Settings from './views/settings';
-import Signin from './components/Singin';
+import Signin from './components/Signin';
 import Addjobs from './views/addjobs';
 import Microsoft from "./views/dashboard/company/microsoft"
 import Facebook from "./views/dashboard/company/facebook"
