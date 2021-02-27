@@ -16,8 +16,8 @@ ReactDOM.render(
       <Route exact path="/" component={Singin} />
       <Route exact path="/signup" component={Singup} />
       {/* <Route path="/admin/dashboard" component={App} /> */}
-      <Route path="/admin" render={(props) => <App {...props} />} />
-      {/* <Redirect from="/" to="/admin/dashboard" /> */}
+      <Route exact path="/admin/dashboard" render={(props) => <App {...props} />} />
+      <Redirect from="/admin/logout" to="/" /> 
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")

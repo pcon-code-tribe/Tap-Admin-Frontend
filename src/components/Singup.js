@@ -39,7 +39,7 @@ function Singup() {
             </div>
 
             <button className="SignUp_button SignUp_sign">
-            <Link to="/admin">Sign Up</Link>
+            <Link to="/admin/dashboard">Sign Up</Link>
             </button>
           </form>
         </section>

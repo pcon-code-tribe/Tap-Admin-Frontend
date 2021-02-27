@@ -50,7 +50,7 @@ function Singin() {
 
             <Link to="/"> Forget your Password </Link>
             <button className="SignIn_button SignIn_sign">
-              <Link to="/admin">Sign In</Link>
+              <Link to="/admin/dashboard">Sign In</Link>
             </button>
           </form>
         </section>

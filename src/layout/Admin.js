@@ -1,20 +1,16 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import Footer from "../components/Footer";
-import Sidebar from "../components/Sidebar";
-
-import routes from "../routes.js";
-
-import image from "../assets/img/logoNITJSR.png";
+import AdminSidebar from '../components/AdminSidebar';
+import routes from '../routes';
 
 function Admin() {
-  const mainPanel = React.useRef(null);
-  const getRoutes = (routes) => {
-    return routes.map((prop, key) => {
-      if (prop.layout === "/admin") {
+   const mainPanel = React.useRef(null);
+   const getRoutes = (routes) => {
+     return routes.map((prop, key) => {
+       if (prop.layout === "/admin"&& prop.path !== "/signout") {
         return (
-          <Route path={prop.layout + prop.path} render={(props) => <prop.component {...props} />} key={key} />
+          <Route exact path={prop.layout + prop.path} render={(props) => <prop.component {...props} />} key={key} />
         );
       } else {
         return null;
@@ -23,14 +19,15 @@ function Admin() {
   };
   return (
     <>
-      <div className="wrapper">
-        <Sidebar image={image} routes={routes} />
+      <div className="wrapper d-flex">
+      <BrowserRouter>
+        <AdminSidebar routes={routes}/>
         <div className="main-panel" ref={mainPanel}>
           <div className="content">
             <Switch>{getRoutes(routes)}</Switch>
           </div>
-          <Footer />
-        </div>
+        </div> 
+        </BrowserRouter>
       </div>
     </>
   );

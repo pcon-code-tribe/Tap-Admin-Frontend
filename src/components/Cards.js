@@ -17,8 +17,8 @@ function Card(props) {
                </a>
                <a href={props.companyLink}>
                    <div className="details">
-                        <span>Veiw Details</span>
-                        <i class="fas fa-chevron-circle-right"></i>
+                        <span>View Details</span>
+                        <i className="fas fa-chevron-circle-right ml-2"></i>
                    </div>
                </a>
             </section>

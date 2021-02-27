@@ -1,11 +1,11 @@
 import React from 'react'
 import {Container, Card, Table} from 'react-bootstrap';
-
+import '../../tables.css';
 //list of students applied for a job (branchwise)
 function appliedbranchwise() {
     return (
         <>
-        <Container>
+        <Container className="table-container">
               <Card className="strpied-tabled-with-hover m-2">
                 <Card.Header>
                   <Card.Title as="h4">CSE</Card.Title>

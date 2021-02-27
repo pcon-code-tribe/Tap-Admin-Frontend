@@ -1,11 +1,11 @@
 import React from 'react'
 
-function profile() {
+function addjobs() {
     return (
         <div>
-            profile display
+            add job details 
         </div>
     )
 }
 
-export default profile
+export default addjobs;

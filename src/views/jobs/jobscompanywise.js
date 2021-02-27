@@ -1,16 +1,17 @@
 import React from 'react'
 import {Card, Container, Table} from 'react-bootstrap'
+import '../tables.css';
 
 //job details according to companywise
 function jobscompanywise() {
     return (
         <>
-        <Container>
+        <Container fluid className="table-container mt-2">
               <Card className="strpied-tabled-with-hover">
                 <Card.Header>
                   <Card.Title as="h4">Jobs/Internships Details</Card.Title>
                 </Card.Header>
-                <Card.Body className="table-full-width table-responsive px-0">
+                <Card.Body className="table-responsive px-0">
                   <Table className="table-hover table-striped">
                     <thead>
                       <tr>
