@@ -1,15 +1,19 @@
 import React from 'react'
 import {Container} from 'react-bootstrap'
-import Cards from "../components/Cards";
-import "../components/cards.css"
+import Cards from "../components/Dashboard-Cards";
+import "../components/dashboard-cards.css"
+
 import mslogo from "../assets/img/microsoft-logo.png";
 import fblogo from "../assets/img/facebook-logo.png" ;
 import pplogo from "../assets/img/paypal-logo.jpg" ;
 import stlogo from "../assets/img/Spotify.png" ;
 
+// import msStd from "./dashboard/student/microsoft"
+
 function Dashboard() {
     return (
         <div className="Dashboard">
+
             <div className="header">
                <h1>Company Details</h1> 
             </div>
@@ -27,8 +31,8 @@ function Dashboard() {
                 name = "Microsoft"
                 role = "Software Developer"
                 requirment = "CSSS3 , HTML5, Javascript, Bootstrap, Jquery"
-                studentLink = "./dashboard/appliedstudents"
-                // companyLink = "./dashboard/companydetails"
+                studentLink = "microsoft-appliedStudents"
+                companyLink = "microsoft"
                 />
     
                 <Cards
@@ -36,8 +40,8 @@ function Dashboard() {
                 name = "Facebook"
                 role = "App Developer"
                 requirment = "CSSS3 , HTML5, Javascript, Bootstrap, Jquery"
-                studentLink = "./dashboard/appliedstudents"
-                // companyLink = "./dashboard/companydetails"
+                studentLink = "facebook-appliedStudents"
+                companyLink = "facebook"
                 />
     
                 <Cards
@@ -45,8 +49,8 @@ function Dashboard() {
                 name = "PayPal"
                 role = "Project Manager"
                 requirment = "CSSS3 , HTML5, Javascript, Bootstrap, Jquery"
-                studentLink = "./dashboard/appliedstudents"
-                // companyLink = "./dashboard/companydetails"
+                studentLink = "paypal-appliedStudents"
+                companyLink = "paypal"
                 />
     
                 <Cards
@@ -54,10 +58,14 @@ function Dashboard() {
                 name = "Spotify"
                 role = "Wordpress Expert"
                 requirment = "CSSS3 , HTML5, Javascript, Bootstrap, Jquery"
-                studentLink = "./dashboard/appliedstudents"
-                // companyLink = "./dashboard/companydetails"
+                studentLink = "spotify-appliedStudents"
+                companyLink = "spotify"
                 />
             </Container>
+            
+            <div className="footer">
+                 
+            </div>
         </div>
     )
 }
