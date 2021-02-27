@@ -7,15 +7,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import App from "./App";
-import Singin from "./components/Singin";
-import Singup from "./components/Singup";
+import Signin from "./components/Singin";
+import Signup from "./components/Singup";
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Route exact path="/" component={Singin} />
-      <Route exact path="/signup" component={Singup} />
-      {/* <Route path="/admin/dashboard" component={App} /> */}
+      <Route exact path="/" component={Signin} />
+      <Route exact path="/signup" component={Signup} />
       <Route exact path="/admin/dashboard" render={(props) => <App {...props} />} />
       <Redirect from="/admin/logout" to="/" /> 
     </Switch>

@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from "react-router-dom";
 
 function Card(props) {
     return (
@@ -12,15 +13,15 @@ function Card(props) {
                <small>{props.role}</small>
                <p>{props.requirment}</p>
 
-               <a href={props.studentLink}>
-                  <button>Applied Students</button>
-               </a>
-               <a href={props.companyLink}>
+                <Link to={`/admin/try-dashboard/${props.studentLink}`}>
+                    <button>Applied Students</button>
+                </Link>
+                <Link to={`/admin/try-dashboard/${props.companyLink}`}>
                    <div className="details">
                         <span>View Details</span>
                         <i className="fas fa-chevron-circle-right ml-2"></i>
                    </div>
-               </a>
+               </Link>
             </section>
         </div>
     )
