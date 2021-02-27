@@ -53,7 +53,7 @@ function Notifications() {
   };
   return (
     <>
-      <div className="rna-container">
+      <div className="rna-container mt-2">
         <NotificationAlert ref={notificationAlertRef} />
       </div>
       <Container fluid>

@@ -9,7 +9,13 @@ function Admin() {
      return routes.map((prop, key) => {
        if (prop.layout === "/admin"&& prop.path !== "/") {
         return (
-          <Route exact path={prop.layout + prop.path} render={(props) => <prop.component {...props} />} key={key} />
+          <Route exact path={prop.layout + prop.path} render={(props) => 
+          <>
+          <div className="wrapper d-flex">
+          <AdminSidebar routes={routes}/>
+          <prop.component {...props} />
+          </div>
+          </>} key={key} />
         );
       } else {
         return (
@@ -23,8 +29,7 @@ function Admin() {
     <>
       <div className="wrapper d-flex">
       <BrowserRouter>
-        <AdminSidebar routes={routes}/>
-          <div className="content mt-2">
+          <div className="content">
             <Switch>{getRoutes(routes)}</Switch>
           </div>
         </BrowserRouter>
