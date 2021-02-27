@@ -9,14 +9,26 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import App from "./App";
 import Signin from "./components/Signin";
 import Signup from "./components/Signup";
+import router from './routes';
+
+const routes = (router) => {
+  return router.map((item, key) => {
+    if(item.path !== "/")
+    return (
+       <Route exact path={`/admin${item.path}`} render={(props) => <App {...props} />} key={key} />
+    )
+    else
+    return (
+      <Route exact path="/" component={Signin} key={key}/>
+    )
+   })}
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Route exact path="/" component={Signin} />
       <Route exact path="/signup" component={Signup} />
-      <Route exact path="/admin/dashboard" render={(props) => <App {...props} />} />
-      <Redirect from="/admin/logout" to="/" /> 
+      {routes(router)}
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")

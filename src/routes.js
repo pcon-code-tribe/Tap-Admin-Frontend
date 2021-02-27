@@ -84,7 +84,7 @@ const dashboardRoutes = [
     layout: "/admin",
   },
   {
-    path: "/logout",
+    path: "/",
     name: "Logout",
     component: Signin,
     layout: "/admin",
