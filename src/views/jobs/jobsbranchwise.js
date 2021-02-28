@@ -1,6 +1,6 @@
 import React from 'react'
 import {Container, Card, Table} from 'react-bootstrap'
-import '../tables.css';
+
 // job details according to branchwise 
 function jobsbranchwise() {
     return (

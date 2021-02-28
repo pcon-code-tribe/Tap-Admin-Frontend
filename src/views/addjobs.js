@@ -2,7 +2,7 @@ import React from 'react'
 
 function addjobs() {
     return (
-        <div>
+        <div className="text-center position-relative">
             add job details 
         </div>
     )

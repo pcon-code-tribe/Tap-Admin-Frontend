@@ -1,8 +1,9 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
 
 import AdminSidebar from '../components/AdminSidebar';
 import routes from '../routes';
+import './Admin.css';
 
 function Admin() {
    const getRoutes = (routes) => {
@@ -27,13 +28,17 @@ function Admin() {
 
   return (
     <>
-      <div className="wrapper d-flex">
       <BrowserRouter>
           <div className="content">
-            <Switch>{getRoutes(routes)}</Switch>
+            <Switch>
+            {getRoutes(routes)}
+            <Redirect from="/admin/" to="/" />
+            <Route exact path="/">
+
+            </Route>
+            </Switch>
           </div>
         </BrowserRouter>
-      </div>
     </>
   );
 }

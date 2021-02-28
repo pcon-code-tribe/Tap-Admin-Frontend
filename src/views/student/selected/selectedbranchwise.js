@@ -1,6 +1,5 @@
 import React from 'react'
 import {Container, Card, Table} from 'react-bootstrap';
-import '../../tables.css';
 
 //list of students got selected in a company (branchwise)
 function selectedbranchwise() {

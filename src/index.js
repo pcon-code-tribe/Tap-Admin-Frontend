@@ -29,6 +29,7 @@ ReactDOM.render(
       <Route exact path="/" component={Signin} />
       <Route exact path="/signup" component={Signup} />
       {routes(router)}
+      <Redirect from="/admin/" to="/" />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")

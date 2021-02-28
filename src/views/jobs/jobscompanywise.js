@@ -1,6 +1,5 @@
 import React from 'react'
 import {Card, Container, Table} from 'react-bootstrap'
-import '../tables.css';
 
 //job details according to companywise
 function jobscompanywise() {
