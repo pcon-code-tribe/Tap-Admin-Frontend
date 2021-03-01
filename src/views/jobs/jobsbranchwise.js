@@ -5,12 +5,12 @@ import {Container, Card, Table} from 'react-bootstrap'
 function jobsbranchwise() {
     return (
         <>
-        <Container>
+        <Container className="table-container">
               <Card className="strpied-tabled-with-hover m-2">
-                <Card.Header>
+                <Card.Header className="text-left">
                   <Card.Title as="h4">CSE</Card.Title>
                 </Card.Header>
-                <Card.Body className="table-full-width table-responsive px-0">
+                <Card.Body className=" table-responsive px-0">
                   <Table className="table-hover table-striped">
                     <thead>
                       <tr>

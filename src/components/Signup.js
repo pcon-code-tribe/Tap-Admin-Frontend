@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./signup.css";
 
-function Singup() {
+function Signup() {
   return (
     <div className="SignUp_App">
       <section className="SignUp_container" id="container">
@@ -39,7 +39,7 @@ function Singup() {
             </div>
 
             <button className="SignUp_button SignUp_sign">
-            <Link to="/admin">Sign Up</Link>
+            <Link to="/admin/dashboard">Sign Up</Link>
             </button>
           </form>
         </section>
@@ -62,4 +62,4 @@ function Singup() {
   );
 }
 
-export default Singup;
+export default Signup;

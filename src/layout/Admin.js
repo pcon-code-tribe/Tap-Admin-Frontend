@@ -1,37 +1,44 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
 
-import Footer from "../components/Footer";
-import Sidebar from "../components/Sidebar";
-
-import routes from "../routes.js";
-
-import image from "../assets/img/logoNITJSR.png";
+import AdminSidebar from '../components/AdminSidebar';
+import routes from '../routes';
+import './Admin.css';
 
 function Admin() {
-  const mainPanel = React.useRef(null);
-  const getRoutes = (routes) => {
-    return routes.map((prop, key) => {
-      if (prop.layout === "/admin") {
+   const getRoutes = (routes) => {
+     return routes.map((prop, key) => {
+       if (prop.layout === "/admin"&& prop.path !== "/") {
         return (
-          <Route path={prop.layout + prop.path} render={(props) => <prop.component {...props} />} key={key} />
+          <Route exact path={prop.layout + prop.path} render={(props) => 
+          <>
+          <div className="wrapper d-flex">
+          <AdminSidebar routes={routes}/>
+          <prop.component {...props} />
+          </div>
+          </>} key={key} />
         );
       } else {
-        return null;
+        return (
+          <Route exact path="/" render={(props) => <prop.component {...props} />} key={key} />
+        );
       }
     });
   };
+
   return (
     <>
-      <div className="wrapper">
-        <Sidebar image={image} routes={routes} />
-        <div className="main-panel" ref={mainPanel}>
+      <BrowserRouter>
           <div className="content">
-            <Switch>{getRoutes(routes)}</Switch>
+            <Switch>
+            {getRoutes(routes)}
+            <Redirect from="/admin/" to="/" />
+            <Route exact path="/">
+
+            </Route>
+            </Switch>
           </div>
-          <Footer />
-        </div>
-      </div>
+        </BrowserRouter>
     </>
   );
 }

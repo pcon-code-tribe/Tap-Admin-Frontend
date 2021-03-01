@@ -1,14 +1,15 @@
-import Dashboard from "./views/Dashboard.js";
-import appliedbranchwise from './views/student/applied/appliedbranchwise';
-import appliedcompanywise from './views/student/applied/appliedcompanywise';
-import selectedbranchwise from './views/student/selected/selectedbranchwise';
-import selectedcompanywise from './views/student/selected/selectedcompanywise';
-import jobsbranchwise from './views/jobs/jobsbranchwise';
-import jobscompanywise from './views/jobs/jobscompanywise';
-import notifications from './views/notifications';
-import profile from './views/profile';
-import settings from './views/settings';
 
+import Dashboard from "./views/Dashboard.js";
+import Appliedbranchwise from './views/student/applied/appliedbranchwise';
+import Appliedcompanywise from './views/student/applied/appliedcompanywise';
+import Selectedbranchwise from './views/student/selected/selectedbranchwise';
+import Selectedcompanywise from './views/student/selected/selectedcompanywise';
+import Jobsbranchwise from './views/jobs/jobsbranchwise';
+import Jobscompanywise from './views/jobs/jobscompanywise';
+import Notifications from './views/notifications';
+import Settings from './views/settings';
+import Signin from './components/Signin';
+import Addjobs from './views/addjobs';
 import Microsoft from "./views/dashboard/company/microsoft"
 import Facebook from "./views/dashboard/company/facebook"
 import Paypal from "./views/dashboard/company/paypal"
@@ -24,72 +25,68 @@ const dashboardRoutes = [
   {
     path: "/dashboard",
     name: "Dashboard",
-    icon: "nc-icon nc-chart-pie-35",
     component: Dashboard,
     layout: "/admin",
   },
   {
-    path: "/appliedbr",
+    path: "/student/appliedbranch",
     name: "Applied (Branchwise)",
-    icon: "nc-icon nc-circle-09",
-    component: appliedbranchwise,
+    component: Appliedbranchwise,
     layout: "/admin",
   },
   {
-    path: "/appliedcmp",
+    path: "/student/appliedcompany",
     name: "Applied (Companywise)",
-    icon: "nc-icon nc-notes",
-    component: appliedcompanywise,
+    component: Appliedcompanywise,
     layout: "/admin",
   },
  
   {
-    path: "/selectedbr",
+    path: "/student/selectedbranch",
     name: "Selected (Branchwise)",
-    icon: "nc-icon nc-atom",
-    component: selectedbranchwise,
+    component: Selectedbranchwise,
     layout: "/admin",
   },
   {
-    path: "/selectedcmp",
+    path: "/student/selectedcompany",
     name: "Selected (Companywise)",
-    icon: "nc-icon nc-bell-55",
-    component: selectedcompanywise,
+    component: Selectedcompanywise,
     layout: "/admin",
   },
   {
-    path: "/jobsbr",
+    path: "/jobs/branch",
     name: "Job Details (Branchwise)",
-    icon: "nc-icon nc-bell-55",
-    component: jobsbranchwise,
+    component: Jobsbranchwise,
     layout: "/admin",
   },
   {
-    path: "/jobscmp",
+    path: "/jobs/company",
     name: "Job Details (Companywise)",
-    icon: "nc-icon nc-bell-55",
-    component: jobscompanywise,
+    component: Jobscompanywise,
+    layout: "/admin",
+  },
+  {
+    path: "/addjobs",
+    name: "Add Jobs",
+    component: Addjobs,
     layout: "/admin",
   },
   {
     path: "/notifications",
     name: "Notifications",
-    icon: "nc-icon nc-bell-55",
-    component: notifications,
-    layout: "/admin",
-  },
-  {
-    path: "/profile",
-    name: "Profile",
-    icon: "nc-icon nc-bell-55",
-    component: profile,
+    component: Notifications,
     layout: "/admin",
   },
   {
     path: "/settings",
     name: "Settings",
-    icon: "nc-icon nc-bell-55",
-    component: settings,
+    component: Settings,
+    layout: "/admin",
+  },
+  {
+    path: "/",
+    name: "Logout",
+    component: Signin,
     layout: "/admin",
   },
   {

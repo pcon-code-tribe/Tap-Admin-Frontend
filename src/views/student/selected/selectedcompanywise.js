@@ -5,7 +5,7 @@ import {Container, Card, Table} from 'react-bootstrap';
 function selectedcompanywise() {
     return (
         <>
-        <Container>
+        <Container className="table-container">
               <Card className="strpied-tabled-with-hover m-2">
                 <Card.Header>
                   <Card.Title as="h4">Google</Card.Title>
