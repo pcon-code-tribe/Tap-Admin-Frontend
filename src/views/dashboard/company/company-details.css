@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.Company-detail{
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.Company-detail .btn{
+    background-color: rgb(230, 15, 140);
+    color: white;
+    margin: auto;
+    display: block;
+    padding: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.Company-detail .container{
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    background-color: rgb(245, 245, 245);
+    text-align: left;
+    border-radius: 5px;
+    padding: 0;
+}
+
+.Company-detail .container .Card{
+    border: 2px solid rgb(224, 223, 223);
+    width: 100%;
+    padding: 20px;
+    line-height: 1.5rem;
+    color: rgb(107, 105, 105);
+}
+
+.Company-detail .subtitle{
+    color: black;
+    font-weight: bold;
+}
+
+.Company-detail .text{
+    margin-bottom: 20px;
+}
+
+.Company-detail .text button{
+    background-color: rgb(218, 218, 218);
+    border: none;
+    border-radius: 15px;
+    margin-right: 10px;
+    margin-top: 10px;
+    padding: 3px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: rgb(107, 105, 105);
+}
+
+.Company-detail .container .title p{
+   margin-bottom: 0;
+}
+
+.Company-detail .container .title .requirment{
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: grey;
+}
+
+.Company-detail .container .title .requirment p{
+    margin-right: 50px;
+}

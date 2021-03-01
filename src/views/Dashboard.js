@@ -15,14 +15,15 @@ function Dashboard() {
         <div className="Dashboard">
 
             <div className="header">
-               <h1>Company Details</h1> 
-            </div>
-
-            <div className="nav">
-                <input type="text" placeholder="Seach By Company-name" /> 
-                <input type="text" placeholder="Skills, Designation, Keywords" />
-                <input type="text" placeholder="Search By Branch" />
-                <button>Search</button>
+                <h1>Company Details</h1> 
+                <div className="nav">
+                    <div className="nav-input">
+                        <input type="text" placeholder="Seach By Company-name" /> 
+                        <input type="text" placeholder="Skills, Designation, Keywords" />
+                        <input type="text" placeholder="Search By Branch" />
+                        <button>Search</button>
+                    </div>
+                </div>
             </div>
 
             <Container className="card-container">

@@ -3,16 +3,17 @@
 }
 
 .Dashboard .header{
+    padding-top: 140px;
+    position: relative;
     width: 100%;
-    height: 450px;
-    background-image: url("../assets/img/dashboard-bg.jpg");
+    height: 650px;
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../assets/img/dashboard-bg.jpg") ;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: white;
+    margin-bottom: 50px;
+    text-align: center;
 }
 
 .Dashboard .header h1{
@@ -20,36 +21,43 @@
 }
 
 .Dashboard .nav{
+    position: absolute;
+    bottom: 0;
     width: 100%;
     min-height: 100px;
-    background-color: rgb(0, 0, 78);
-    margin-bottom: 50px;
-    padding: 35px;
-    margin: auto;
+    background-color:rgba(255,255,255,0.5);
+    padding: 30px;
     text-align: center;
 }
 
-.Dashboard .nav input{
-    width: 280px;
-    height: 50px;
-    background-color: rgba(0,0,0,0.8);
-    color: hsl(0, 0%, 100%);
-    outline: none;
-    border: none;
-    margin-top: 20px;
-    margin-left: 20px;
-    padding-left: 10px;
+.Dashboard .nav .nav-input{
+    width: 80%;
+    margin: auto;
 }
 
-.Dashboard .nav button{
-    display: block;
-    margin: auto;
-    margin-top: 20px;
-    height: 50px;
+.Dashboard .nav .nav-input input{
     width: 280px;
+    height: 50px;
+    background-color: white;
+    color: black;
+    outline: none;
+    border: none;
+    /* margin-left: 20px; */
+    margin-top: 15px;
+    padding-left: 20px;
+    border-left: 2px solid rgb(66, 66, 66);
+}
+
+.Dashboard .nav .nav-input button{
+    display: block;
+    height: 47px;
+    width: 280px;
+    /* margin-left: 20px; */
+    margin-top: 15px;
     background-color: rgb(230, 15, 140);
     color: white;
     border: none;
+    display: inline;
 }
 
 
@@ -69,7 +77,7 @@
 
 .Dashboard .card{
     text-align: center;
-    min-width: 400px;
+    width: 400px;
     background-color: white;
     margin: 20px;
     padding: 30px 50px 50px 50px;
@@ -150,4 +158,35 @@
     height: 100px;
     background-color: rgb(0, 0, 78);
     color: white;
+}
+
+@media only screen and (max-width:780px) {
+    .Dashboard .header{
+        text-align: center;
+        padding-top: 70px;
+    }
+    .Dashboard .nav .nav-input{
+        width: 90%;
+        margin: auto;
+    }
+    .Dashboard .nav .nav-input input, .Dashboard .nav .nav-input button{
+        width: 100%;
+        margin: auto;
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width:550px) {
+    .Dashboard .header{
+        text-align: center;
+        
+    }
+    .Dashboard .nav .nav-input{
+        width: 70%;
+        margin: auto;
+    }
+    .Dashboard .card{
+        max-width: 250px;
+    }
+    
 }
